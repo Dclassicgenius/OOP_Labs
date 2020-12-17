@@ -5,6 +5,9 @@ public class Square implements Shape {
     private final double side;
 
     public Square(double side) {
+        if (side < 0) {
+            throw new ShapeException("side < 0");
+        }
         this.side = side;
     }
 

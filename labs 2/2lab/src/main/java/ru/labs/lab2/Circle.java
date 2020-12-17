@@ -5,10 +5,13 @@ public class Circle implements Shape {
     private final double radius;
 
     public Circle(double radius) {
+        if (radius < 0) {
+            throw new ShapeException("radius < 0");
+        }
         this.radius = radius;
     }
 
-    private double getRadius(){
+    private double getRadius() {
         return radius;
     }
 

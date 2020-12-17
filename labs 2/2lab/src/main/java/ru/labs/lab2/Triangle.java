@@ -7,6 +7,15 @@ public class Triangle implements Shape {
     private final double c;
 
     public Triangle(double a, double b, double c) {
+        if (a < 0) {
+            throw new ShapeException("side a < 0");
+        }
+        if (b < 0) {
+            throw new ShapeException("side b < 0");
+        }
+        if (c < 0) {
+            throw new ShapeException("side c < 0");
+        }
         this.a = a;
         this.b = b;
         this.c = c;
